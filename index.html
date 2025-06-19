@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro Profesional AI4Devs | Stopwatch Online</title>
+    <meta name="description" content="Cronómetro online y cuenta atrás con diseño profesional">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Cronómetro AI4Devs</h1>
+            <nav class="tab-buttons">
+                <button class="tab-button active" data-tab="stopwatch">Cronómetro</button>
+                <button class="tab-button" data-tab="countdown">Cuenta Atrás</button>
+            </nav>
+        </header>
+
+        <main class="app-main">
+            <div class="tab-content active" id="stopwatch">
+                <div class="time-display" id="stopwatch-time">00:00:00.00</div>
+                <div class="control-buttons">
+                    <button id="start-stopwatch" class="control-button start">Iniciar</button>
+                    <button id="pause-stopwatch" class="control-button pause" disabled>Pausar</button>
+                    <button id="reset-stopwatch" class="control-button reset" disabled>Reiniciar</button>
+                </div>
+            </div>
+
+            <div class="tab-content" id="countdown">
+                <div class="time-input">
+                    <input type="text" id="countdown-input" placeholder="mm:ss" pattern="[0-9]{1,2}:[0-9]{2}">
+                    <button id="set-countdown" class="set-button">Establecer</button>
+                </div>
+                <div class="time-display" id="countdown-time">00:00:00</div>
+                <div class="control-buttons">
+                    <button id="start-countdown" class="control-button start" disabled>Iniciar</button>
+                    <button id="pause-countdown" class="control-button pause" disabled>Pausar</button>
+                    <button id="reset-countdown" class="control-button reset" disabled>Reiniciar</button>
+                </div>
+                <div class="sound-control">
+                    <label>
+                        <input type="checkbox" id="sound-toggle" checked>
+                        Sonido al finalizar
+                    </label>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="app-footer">
+            <p>Cronómetro profesional AI4Devs ©2025</p>
+        </footer>
+    </div>
+
+    <audio id="alarm-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
