@@ -3,58 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronómetro Profesional AI4Devs | Stopwatch Online</title>
-    <meta name="description" content="Cronómetro online y cuenta atrás con diseño profesional">
+    <title>Cronómetro y Cuenta Atrás</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Cronómetro AI4Devs</h1>
-            <nav class="tab-buttons">
-                <button class="tab-button active" data-tab="stopwatch">Cronómetro</button>
-                <button class="tab-button" data-tab="countdown">Cuenta Atrás</button>
-            </nav>
-        </header>
-
-        <main class="app-main">
-            <div class="tab-content active" id="stopwatch">
-                <div class="time-display" id="stopwatch-time">00:00:00.00</div>
-                <div class="control-buttons">
-                    <button id="start-stopwatch" class="control-button start">Iniciar</button>
-                    <button id="pause-stopwatch" class="control-button pause" disabled>Pausar</button>
-                    <button id="reset-stopwatch" class="control-button reset" disabled>Reiniciar</button>
-                </div>
+    <main class="container">
+        <section class="timer">
+            <h2>Cronómetro</h2>
+            <div class="display" id="stopwatch-display">00:00:00</div>
+            <div class="controls">
+                <button id="stopwatch-start" class="btn">Iniciar</button>
+                <button id="stopwatch-pause" class="btn" disabled>Pausar</button>
+                <button id="stopwatch-reset" class="btn" disabled>Reiniciar</button>
             </div>
+        </section>
 
-            <div class="tab-content" id="countdown">
-                <div class="time-input">
-                    <input type="text" id="countdown-input" placeholder="mm:ss" pattern="[0-9]{1,2}:[0-9]{2}">
-                    <button id="set-countdown" class="set-button">Establecer</button>
-                </div>
-                <div class="time-display" id="countdown-time">00:00:00</div>
-                <div class="control-buttons">
-                    <button id="start-countdown" class="control-button start" disabled>Iniciar</button>
-                    <button id="pause-countdown" class="control-button pause" disabled>Pausar</button>
-                    <button id="reset-countdown" class="control-button reset" disabled>Reiniciar</button>
-                </div>
-                <div class="sound-control">
-                    <label>
-                        <input type="checkbox" id="sound-toggle" checked>
-                        Sonido al finalizar
-                    </label>
-                </div>
+        <section class="countdown">
+            <h2>Cuenta Atrás</h2>
+            <input type="number" id="countdown-input" min="1" placeholder="Segundos" class="input">
+            <div class="display" id="countdown-display">00:00:00</div>
+            <div class="controls">
+                <button id="countdown-start" class="btn">Iniciar</button>
+                <button id="countdown-pause" class="btn" disabled>Pausar</button>
+                <button id="countdown-reset" class="btn" disabled>Reiniciar</button>
             </div>
-
-        </main>
-
-        <footer class="app-footer">
-            <p>Cronómetro profesional AI4Devs ©2025</p>
-        </footer>
-    </div>
-
-    <audio id="alarm-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" preload="auto"></audio>
-
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
