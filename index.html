@@ -8,26 +8,29 @@
 </head>
 <body>
     <main class="container">
-        <section class="timer">
-            <h2>Cronómetro</h2>
-            <div class="display" id="stopwatch-display">00:00:00</div>
-            <div class="controls">
-                <button id="stopwatch-start" class="btn">Iniciar</button>
-                <button id="stopwatch-pause" class="btn" disabled>Pausar</button>
-                <button id="stopwatch-reset" class="btn" disabled>Reiniciar</button>
-            </div>
-        </section>
-
-        <section class="countdown">
-            <h2>Cuenta Atrás</h2>
-            <input type="number" id="countdown-input" min="1" placeholder="Segundos" class="input">
-            <div class="display" id="countdown-display">00:00:00</div>
-            <div class="controls">
-                <button id="countdown-start" class="btn">Iniciar</button>
-                <button id="countdown-pause" class="btn" disabled>Pausar</button>
-                <button id="countdown-reset" class="btn" disabled>Reiniciar</button>
-            </div>
-        </section>
+        <div class="tabs">
+            <button class="tab active" data-tab="stopwatch">Cronómetro</button>
+            <button class="tab" data-tab="countdown">Cuenta Atrás</button>
+        </div>
+        <div class="content">
+            <section id="stopwatch" class="tab-content active">
+                <div class="display" id="stopwatch-display">00:00:00</div>
+                <div class="controls">
+                    <button id="stopwatch-start" class="btn">Iniciar</button>
+                    <button id="stopwatch-pause" class="btn" disabled>Pausar</button>
+                    <button id="stopwatch-reset" class="btn" disabled>Reiniciar</button>
+                </div>
+            </section>
+            <section id="countdown" class="tab-content">
+                <input type="number" id="countdown-input" min="1" placeholder="Segundos" class="input">
+                <div class="display" id="countdown-display">00:00:00</div>
+                <div class="controls">
+                    <button id="countdown-start" class="btn">Iniciar</button>
+                    <button id="countdown-pause" class="btn" disabled>Pausar</button>
+                    <button id="countdown-reset" class="btn" disabled>Reiniciar</button>
+                </div>
+            </section>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
